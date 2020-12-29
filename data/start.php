@@ -128,4 +128,15 @@ if (strtolower($message['text']) == "start" || strtolower($message['text']) == "
                         
                     )
                 ));
+            }else if (strtolower($message['text']) == "fsm") {
+                $client->replyMessage(array(
+                    'replyToken' => $event['replyToken'],
+                    'messages' => array(
+                        array(
+                            'type' => 'image', //訊息類型 (圖片)
+                            'originalContentUrl' => 'https://i.imgur.com/MD0CyuV.png', //回復圖片
+                            'previewImageUrl' => 'https://i.imgur.com/MD0CyuV.png' //回復的預覽圖片
+                        )
+                    )
+                ));
             }
